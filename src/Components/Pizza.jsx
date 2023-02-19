@@ -17,40 +17,69 @@ function Pizza() {
             <div className="col-md-8">
               <div className="card-body">
                 <h5 className="card-title text-center h1">Make Custom Pizza</h5>
-                <div class="container card-text text-center col-md-auto">
+                <div className="container card-text text-center col-md-auto">
                   <div className="row my-5">
-                    <div class="col">
-                      <p className="h3">Crust</p>
+                    <div className="col">
+                      <p className="h3" id="test">
+                        Crust
+                      </p>
                       <select>
-                        {PizzaIngredients[0].crusts_varients.map((varient) => {
-                          return <option value={varient}>{varient}</option>;
+                        {PizzaIngredients[0].crusts.map((varient, i) => {
+                          return (
+                            <option value={varient.name} key={i}>
+                              {varient.name}
+                            </option>
+                          );
                         })}
                       </select>
                     </div>
-                    <div class="col">
+                    <div className="col">
                       <p className="h3">Sauce</p>
                       <select>
-                        {PizzaIngredients[0].sauces_varients.map((varient) => {
-                          return <option value={varient}>{varient}</option>;
+                        {PizzaIngredients[0].sauces.map((varient, i) => {
+                          return (
+                            <option value={varient.name} key={i}>
+                              {varient.name}
+                            </option>
+                          );
                         })}
                       </select>
                     </div>
-                    <div class="col">
+                    <div className="col">
                       <p className="h3">Cheese</p>
                       <select>
-                        {PizzaIngredients[0].cheeses_varients.map((varient) => {
-                          return <option value={varient}>{varient}</option>;
+                        {PizzaIngredients[0].cheeses.map((varient, i) => {
+                          return (
+                            <option value={varient.name} key={i}>
+                              {varient.name}
+                            </option>
+                          );
                         })}
                       </select>
                     </div>
-                    <div class="col">
+                    <div className="col">
                       <p className="h3">Veggies</p>
                       <select>
-                        {PizzaIngredients[0].veggies_varients.map((varient) => {
-                          return <option value={varient}>{varient}</option>;
+                        {PizzaIngredients[0].veggies.map((varient, i) => {
+                          return (
+                            <option value={varient.name} key={i}>
+                              {varient.name}
+                            </option>
+                          );
                         })}
                       </select>
                     </div>
+                  </div>
+                  <div className="row">
+                    <p className="col text-start h5 align-baseline">
+                      Price Rs./-
+                    </p>
+                    <button
+                      type="button"
+                      className="col btn btn-warning align-baseline"
+                    >
+                      Check Out
+                    </button>
                   </div>
                 </div>
               </div>
