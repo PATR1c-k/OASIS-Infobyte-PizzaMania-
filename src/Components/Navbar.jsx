@@ -5,7 +5,7 @@ function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
         <div className="container-fluid">
-          <a className="navbar-brand" to="/">
+          <a className="navbar-brand" href="/">
             PizzaMania
           </a>
           <button
