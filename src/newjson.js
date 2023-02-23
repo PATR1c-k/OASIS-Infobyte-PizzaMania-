@@ -1,0 +1,3 @@
+const PizzaIngredients = {
+  crusts: [],
+};

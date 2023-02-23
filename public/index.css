@@ -1,23 +1,57 @@
 .custom_pizza_input_card {
     padding: 10px;
     width: 75%;
+    height: 50%;
     padding-top: 30px;
 };
 
 /* Style for option tag */
 option {
-  width:1.5rem;
   font-size: 16px;
   font-weight: bold;
-  color: #333;
+  color: #7f9e11;
   background-color: #fff;
   padding: 5px 10px;
-    border: 2px double black;
-}
+  border: 2px double black;
+};
 
-/* Style for selected option tag */
 option:checked {
   background-color: rgb(255, 237, 98);
   color: #c00;
   text-shadow: 1px 1px #fff;
+};
+
+select {
+    min-width: 150px;
+    margin: 10px;
+    border: 3px double black;
 }
+
+select:focus {
+    min-width: 150px;
+    width: auto;
+}
+
+
+/* Style the image container */
+.pizza-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.pizza-image img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+} 
+
+.pizza-image img:hover {
+    transform: scale(1.1);
+} 
+
+

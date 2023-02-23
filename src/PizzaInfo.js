@@ -1,114 +1,126 @@
-const PizzaIngredients = [
-  {
-    crusts: [
-      {
-        name: "Thin crust",
-        description: "Crispy, thin and light crust",
-        price: 200,
-      },
-      {
-        name: "Thick crust",
-        description: "Soft and chewy thick crust",
-        price: 250,
-      },
-      {
-        name: "Stuffed crust",
-        description: "Crispy crust stuffed with cheese",
-        price: 250,
-      },
+const PizzaIngredients = {
+  crusts: [
+    {
+      id: 0,
+      name: "Thin crust",
+      description: "Crispy, thin and light crust",
+      price: 200,
+      crust_image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJkVZnLPfwCZLmG9wFwtOY3BHVq7cSGf9GHA&usqp=CAU",
+    },
+    {
+      id: 1,
+      name: "Thick crust",
+      description: "Soft and chewy thick crust",
+      price: 250,
+      crust_image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGP0Gawb41x7u52i-2-PLdDuyh3kasTVWXQQ&usqp=CAU",
+    },
+    {
+      id: 2,
+      name: "Crispy crust",
+      description: "Crispy crust stuffed with cheese",
+      price: 250,
+      crust_image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL4OwDuPBkyBrWcN1kd3wiu49nE3GbT173lA&usqp=CAU",
+    },
+    {
+      id: 3,
+      name: "Stuffed crust pizza",
+      description:
+        "Stuffed crust pizza is pizza with cheese (typically mozzarella) or other ingredients added into the outer edge of the crust.",
+      price: 300,
+      crust_image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjlqHCQyN6vxrpxgksBK4hIOqqw4WwL2i1cA&usqp=CAU",
+    },
+    {
+      id: 4,
+      name: "Cheese Crust Pizza",
+      description:
+        "Cheese crust pizza is a flourless pizza crust made of cheese and finished with your favorite toppings",
+      price: 350,
+      crust_image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6irEzMByPECNM6TTSsNg1P9xGyncn5RbDMw&usqp=CAU",
+    },
+  ],
+  sauces: [
+    {
+      name: "Tomato sauce",
+      description: "Classic pizza sauce made with tomatoes",
+      price: 20,
+    },
+    {
+      name: "Barbecue sauce",
+      description: "Sweet and smoky barbecue sauce",
+      price: 30,
+    },
+    {
+      name: "Pesto sauce",
+      description: "Savory sauce made with basil and garlic",
+      price: 50,
+    },
 
-      {
-        name: "Stuffed crust pizza",
-        description:
-          "Stuffed crust pizza is pizza with cheese (typically mozzarella) or other ingredients added into the outer edge of the crust.",
-        price: 300,
-      },
-      {
-        name: "Cheese Crust Pizza",
-        description:
-          "Cheese crust pizza is a flourless pizza crust made of cheese and finished with your favorite toppings",
-        price: 350,
-      },
-    ],
-    sauces: [
-      {
-        name: "Tomato sauce",
-        description: "Classic pizza sauce made with tomatoes",
-        price: 20,
-      },
-      {
-        name: "Barbecue sauce",
-        description: "Sweet and smoky barbecue sauce",
-        price: 30,
-      },
-      {
-        name: "Pesto sauce",
-        description: "Savory sauce made with basil and garlic",
-        price: 50,
-      },
+    {
+      name: "Creamy white sauce",
+      description:
+        "a sauce traditionally made from a white roux (butter and flour in a 1:1 mixture by weight) and milk.",
+      price: 40,
+    },
+    {
+      name: "Garlic and herb Sauce",
+      description:
+        "What is garlic and herb sauce made of Garlic butter sauce is made of butter, dried or fresh parsley, and garlic. Other herbs, such as thyme or rosemary, may be used in place of parsley.",
+      price: 60,
+    },
+  ],
+  cheeses: [
+    {
+      name: "Mozerella",
+      description:
+        "Mozzarella is a plastic or stretched-curd cheese; the curd is mixed with heated whey and stretched and kneaded until it attains a smooth, pliable consistency.",
+      price: 50,
+    },
 
-      {
-        name: "Creamy white sauce",
-        description:
-          "a sauce traditionally made from a white roux (butter and flour in a 1:1 mixture by weight) and milk.",
-        price: 40,
-      },
-      {
-        name: "Garlic and herb Sauce",
-        description:
-          "What is garlic and herb sauce made of Garlic butter sauce is made of butter, dried or fresh parsley, and garlic. Other herbs, such as thyme or rosemary, may be used in place of parsley.",
-        price: 60,
-      },
-    ],
-    cheeses: [
-      {
-        name: "Mozerella",
-        description:
-          "Mozzarella is a plastic or stretched-curd cheese; the curd is mixed with heated whey and stretched and kneaded until it attains a smooth, pliable consistency.",
-        price: 50,
-      },
+    {
+      name: "Feta",
+      description:
+        "feta, fresh, white, soft or semisoft cheese of Greece, originally made exclusively from goat's or sheep's milk but in modern times containing cow's milk.",
+      price: 60,
+    },
+    {
+      name: "Kalari",
+      description:
+        "it gets brownish crispy layer outside and soft, creamy, gooey melted cheese inside (akin to melted mozzarella cheese).",
+      price: 70,
+    },
+  ],
 
-      {
-        name: "Feta",
-        description:
-          "feta, fresh, white, soft or semisoft cheese of Greece, originally made exclusively from goat's or sheep's milk but in modern times containing cow's milk.",
-        price: 60,
-      },
-      {
-        name: "Kalari",
-        description:
-          "it gets brownish crispy layer outside and soft, creamy, gooey melted cheese inside (akin to melted mozzarella cheese).",
-        price: 70,
-      },
-    ],
-
-    veggies: [
-      {
-        name: "Pepperoni",
-        description: "Spicy Italian sausage slices",
-      },
-      {
-        name: "Mushrooms",
-        description: "Fresh sliced mushrooms",
-      },
-      {
-        name: "Onions",
-        description: "Chopped onions",
-      },
-      {
-        name: "Green peppers",
-        description: "Fresh green bell peppers",
-      },
-      {
-        name: "Olives",
-        description: "Sliced black olives",
-      },
-      {
-        name: "Pineapple",
-        description: "Sweet and tangy pineapple chunks",
-      },
-    ],
-  },
-];
+  veggies: [
+    {
+      name: "Pepperoni",
+      description: "Spicy Italian sausage slices",
+    },
+    {
+      name: "Mushrooms",
+      description: "Fresh sliced mushrooms",
+    },
+    {
+      name: "Onions",
+      description: "Chopped onions",
+    },
+    {
+      name: "Green peppers",
+      description: "Fresh green bell peppers",
+    },
+    {
+      name: "Olives",
+      description: "Sliced black olives",
+    },
+    {
+      name: "Pineapple",
+      description: "Sweet and tangy pineapple chunks",
+    },
+  ],
+};
 
 export default PizzaIngredients;
