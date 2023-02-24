@@ -1,16 +1,12 @@
-const mongoose = require("mongoose");
+import { set, connect } from "mongoose";
 const mongoURL =
   "mongodb+srv://pratik:test:123@cluster0.am5xmqs.mongodb.net/?retryWrites=true&w=majority/Mern-Pizza";
 
-mongoose.set("strictQuery", false);
+set("strictQuery", false);
 const Connectmongo = () => {
-  mongoose.connect(
-    mongoURL,
-    { useUnifiedTopology: true, useNewUrlParser: true },
-    () => {
-      console.log("Successfully connected to the Mern-Pizza");
-    }
-  );
+  connect(mongoURL, { useUnifiedTopology: true, useNewUrlParser: true }, () => {
+    console.log("Successfully connected to the Mern-Pizza");
+  });
 };
 
-module.exports = Connectmongo;
+export default Connectmongo;

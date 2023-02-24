@@ -45,28 +45,33 @@ const PizzaIngredients = {
   ],
   sauces: [
     {
+      id: 0,
       name: "Tomato sauce",
       description: "Classic pizza sauce made with tomatoes",
       price: 20,
     },
     {
+      id: 1,
       name: "Barbecue sauce",
       description: "Sweet and smoky barbecue sauce",
       price: 30,
     },
     {
+      id: 2,
       name: "Pesto sauce",
       description: "Savory sauce made with basil and garlic",
       price: 50,
     },
 
     {
+      id: 3,
       name: "Creamy white sauce",
       description:
         "a sauce traditionally made from a white roux (butter and flour in a 1:1 mixture by weight) and milk.",
       price: 40,
     },
     {
+      id: 4,
       name: "Garlic and herb Sauce",
       description:
         "What is garlic and herb sauce made of Garlic butter sauce is made of butter, dried or fresh parsley, and garlic. Other herbs, such as thyme or rosemary, may be used in place of parsley.",
@@ -75,6 +80,7 @@ const PizzaIngredients = {
   ],
   cheeses: [
     {
+      id: 0,
       name: "Mozerella",
       description:
         "Mozzarella is a plastic or stretched-curd cheese; the curd is mixed with heated whey and stretched and kneaded until it attains a smooth, pliable consistency.",
@@ -82,12 +88,14 @@ const PizzaIngredients = {
     },
 
     {
+      id: 1,
       name: "Feta",
       description:
         "feta, fresh, white, soft or semisoft cheese of Greece, originally made exclusively from goat's or sheep's milk but in modern times containing cow's milk.",
       price: 60,
     },
     {
+      id: 2,
       name: "Kalari",
       description:
         "it gets brownish crispy layer outside and soft, creamy, gooey melted cheese inside (akin to melted mozzarella cheese).",

@@ -1,5 +1,5 @@
 const express = require("express");
-const Connectmongo = require("./db");
+const Connectmongo = require("./db").default;
 
 Connectmongo();
 

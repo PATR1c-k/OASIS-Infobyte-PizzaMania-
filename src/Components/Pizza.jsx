@@ -2,12 +2,18 @@ import React, { useEffect, useState } from "react";
 import PizzaIngredients from "../PizzaInfo";
 
 function Pizza() {
-  const [crust, updateCrust] = useState(0);
-  const [image, setImage] = useState(
-    PizzaIngredients.crusts[crust].crust_image
+  const [image, setImage] = useState(PizzaIngredients.crusts[0].crust_image);
+  const [crustprice, setcrustPrice] = useState(
+    PizzaIngredients.crusts[0].price
   );
-
+  const [sauceprice, setsaucePrice] = useState(
+    PizzaIngredients.sauces[0].price
+  );
+  const [cheeseprice, setcheesePrice] = useState(
+    PizzaIngredients.cheeses[0].price
+  );
   // console.log(crust);
+  const price = crustprice + sauceprice + cheeseprice;
 
   return (
     <div className="container-fluid">
@@ -32,6 +38,9 @@ function Pizza() {
                           setImage(
                             PizzaIngredients.crusts[e.target.value].crust_image
                           );
+                          setcrustPrice(
+                            PizzaIngredients.crusts[e.target.value].price
+                          );
                         }}
                       >
                         {PizzaIngredients.crusts.map((crust, i) => {
@@ -46,11 +55,17 @@ function Pizza() {
 
                     <div className="col">
                       <p className="h3">Sauce</p>
-                      <select>
-                        {PizzaIngredients.sauces.map((varient, i) => {
+                      <select
+                        onChange={(e) => {
+                          setsaucePrice(
+                            PizzaIngredients.sauces[e.target.value].price
+                          );
+                        }}
+                      >
+                        {PizzaIngredients.sauces.map((sauce, i) => {
                           return (
-                            <option value={varient.name} key={i}>
-                              {varient.name} {varient.price}/-
+                            <option value={sauce.id} key={i}>
+                              {sauce.name} {sauce.price}/-
                             </option>
                           );
                         })}
@@ -59,11 +74,17 @@ function Pizza() {
 
                     <div className="col">
                       <p className="h3">Cheese</p>
-                      <select>
-                        {PizzaIngredients.cheeses.map((varient, i) => {
+                      <select
+                        onChange={(e) => {
+                          setcheesePrice(
+                            PizzaIngredients.cheeses[e.target.value].price
+                          );
+                        }}
+                      >
+                        {PizzaIngredients.cheeses.map((cheese, i) => {
                           return (
-                            <option value={varient.name} key={i}>
-                              {varient.name} {varient.price}/-
+                            <option value={cheese.id} key={i}>
+                              {cheese.name} {cheese.price}/-
                             </option>
                           );
                         })}
@@ -86,7 +107,7 @@ function Pizza() {
 
                   <div className="row">
                     <p className="col text-start h5 align-baseline">
-                      Price Rs./-
+                      {price} Rs./-
                     </p>
                     <button
                       type="button"
