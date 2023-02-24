@@ -12,8 +12,11 @@ function Pizza() {
   const [cheeseprice, setcheesePrice] = useState(
     PizzaIngredients.cheeses[0].price
   );
+  const [veggieprice, setveggiePrice] = useState(
+    PizzaIngredients.veggies[0].price
+  );
   // console.log(crust);
-  const price = crustprice + sauceprice + cheeseprice;
+  const price = crustprice + sauceprice + cheeseprice + veggieprice;
 
   return (
     <div className="container-fluid">
@@ -93,10 +96,16 @@ function Pizza() {
 
                     <div className="col">
                       <p className="h3">Veggies</p>
-                      <select>
-                        {PizzaIngredients.veggies.map((varient, i) => {
+                      <select
+                        onChange={(e) => {
+                          setveggiePrice(
+                            PizzaIngredients.veggies[e.target.value].price
+                          );
+                        }}
+                      >
+                        {PizzaIngredients.veggies.map((veggie, i) => {
                           return (
-                            <option value={varient.name} key={i}>
+                            <option value={veggie.id} key={i}>
                               {varient.name}
                             </option>
                           );

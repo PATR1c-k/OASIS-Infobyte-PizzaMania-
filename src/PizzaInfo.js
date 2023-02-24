@@ -105,28 +105,40 @@ const PizzaIngredients = {
 
   veggies: [
     {
+      id: 0,
       name: "Pepperoni",
       description: "Spicy Italian sausage slices",
+      price: 0,
     },
     {
+      id: 1,
       name: "Mushrooms",
       description: "Fresh sliced mushrooms",
+      price: 0,
     },
     {
+      id: 2,
       name: "Onions",
       description: "Chopped onions",
+      price: 0,
     },
     {
+      id: 3,
       name: "Green peppers",
       description: "Fresh green bell peppers",
+      price: 0,
     },
     {
+      id: 4,
       name: "Olives",
       description: "Sliced black olives",
+      price: 0,
     },
     {
+      id: 5,
       name: "Pineapple",
       description: "Sweet and tangy pineapple chunks",
+      price: 0,
     },
   ],
 };
