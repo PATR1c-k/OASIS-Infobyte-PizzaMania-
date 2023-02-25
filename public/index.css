@@ -5,6 +5,16 @@
     padding-top: 30px;
 };
 
+/* carousel */
+.carousel-image{
+    height: 300px;
+    width: 200px;
+}
+
+.carousel-inner{
+    height: 500px;
+}
+
 /* Style for option tag */
 option {
   font-size: 16px;
